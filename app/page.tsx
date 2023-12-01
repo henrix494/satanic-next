@@ -5,7 +5,7 @@ export default function Home() {
   const [test, setTest] = useState();
   useEffect(() => {
     const testData = async () => {
-      const data = await fetch("http://localhost:3000/api/create-pets-table");
+      const data = await fetch("/api/create-pets-table");
       const res = await data.json();
       setTest(res.success[0].image_url);
     };
