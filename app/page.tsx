@@ -13,7 +13,11 @@ export default function Home() {
   }, []);
   return (
     <main>
-      {test ? <Image src={test} width={100} height={100} /> : "Loading"}
+      {test ? (
+        <Image src={test} width={100} height={100} alt="Fuck off" />
+      ) : (
+        "Loading"
+      )}
     </main>
   );
 }
