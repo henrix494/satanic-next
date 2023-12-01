@@ -9,9 +9,15 @@ export default async function Home() {
 
   return (
     <main>
-      {url.map((item) => {
+      {url.map((item, index) => {
         return (
-          <Image width={100} height={100} alt="Fuck you" src={item.image_url} />
+          <Image
+            key={index}
+            width={100}
+            height={100}
+            alt="Fuck you"
+            src={item.image_url}
+          />
         );
       })}
     </main>
