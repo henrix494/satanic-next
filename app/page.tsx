@@ -1,23 +1,19 @@
-"use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-export default function Home() {
-  const [test, setTest] = useState();
-  useEffect(() => {
-    const testData = async () => {
-      const data = await fetch("/api/create-pets-table");
-      const res = await data.json();
-      setTest(res.success[0].image_url);
-    };
-    testData();
-  }, []);
+import { sql } from "@vercel/postgres";
+
+export default async function Home() {
+  let data =
+    await sql`SELECT Image_url FROM poster_images,posters WHERE posters._id = poster_images.Poster_id`;
+  const { rows: url } = data;
+  url.map((item) => console.log(item.image_url));
+
   return (
     <main>
-      {test ? (
-        <Image src={test} width={100} height={100} alt="Fuck off" />
-      ) : (
-        "Loading"
-      )}
+      {url.map((item) => {
+        return (
+          <Image width={100} height={100} alt="Fuck you" src={item.image_url} />
+        );
+      })}
     </main>
   );
 }
