@@ -10,9 +10,7 @@ export default function Hero() {
         alt="logo"
       />{" "}
       <Image
-        src={
-          "/HEXMAS-DESKTOP_1_8b928012-83f3-4727-a91f-0be9285a2a28_1540x.webp"
-        }
+        src={"/HEXMAS-DESKTOP_1_8b928012-83f3-4727-a91f-0be9285a2a28_1540x.png"}
         className="w-screen"
         width={1100}
         height={100}
