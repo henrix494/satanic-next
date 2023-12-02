@@ -19,7 +19,7 @@ export default function ManAndWoman() {
     });
   };
 
-  if (typeof window !== undefined) {
+  if (typeof window !== "undefined") {
     window?.addEventListener("mousemove", handleMouseMove);
   }
   const bodyElement = document.querySelector("body");
