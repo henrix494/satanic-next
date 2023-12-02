@@ -20,18 +20,20 @@ export default function ManAndWoman() {
   };
 
   if (typeof window !== "undefined") {
-    window?.addEventListener("mousemove", handleMouseMove);
-  }
-  const bodyElement = document.querySelector("body");
+    window.addEventListener("mousemove", handleMouseMove);
 
-  if (bodyElement) {
-    if (isHovering) {
-      bodyElement.style.cursor = "none";
-    } else {
-      // Optionally, reset to the default cursor when not hovering
-      bodyElement.style.cursor = "";
+    const bodyElement = document.querySelector("body");
+
+    if (bodyElement) {
+      if (isHovering) {
+        bodyElement.style.cursor = "none";
+      } else {
+        // Optionally, reset to the default cursor when not hovering
+        bodyElement.style.cursor = "";
+      }
     }
   }
+
   return (
     <div
       className="flex justify-center p-12 bg-[#dddbdb] gap-4 image-container"
