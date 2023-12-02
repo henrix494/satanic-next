@@ -21,7 +21,7 @@ export default function NavbarDesk() {
   }, []);
   return (
     <nav
-      className={` text-xl    h-[40px] items-center text-white    w-full max-lg:hidden fixed top-0  ${
+      className={` text-xl    h-[40px] items-center text-white transition-all    w-full max-lg:hidden fixed top-0  ${
         scrollPos > 5 ? "px-[0%]  " : "px-[15%]"
       }  `}
     >

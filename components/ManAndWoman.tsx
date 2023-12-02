@@ -18,8 +18,10 @@ export default function ManAndWoman() {
       y: event.clientY,
     });
   };
-  window?.addEventListener("mousemove", handleMouseMove);
 
+  if (typeof window !== undefined) {
+    window?.addEventListener("mousemove", handleMouseMove);
+  }
   const bodyElement = document.querySelector("body");
 
   if (bodyElement) {
