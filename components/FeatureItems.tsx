@@ -15,7 +15,7 @@ export default function FeatureItems() {
         <motion.div style={{ x }} className="flex gap-20 items-center  ">
           {ItemsIMGS.map((item) => {
             return (
-              <div className=" w-[40vw] max-lg:w-screen ">
+              <div key={item.id} className=" w-[40vw] max-lg:w-screen ">
                 <Image
                   src={item.src}
                   height={item.height}
