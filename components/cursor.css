@@ -20,3 +20,21 @@
   color: white;
   transform: translate(-50%, -50%);
 }
+.wrapper {
+  display: flex;
+
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+}
+
+.slide {
+  scroll-snap-align: start;
+}
+
+.heroFull {
+  height: 100vh;
+  background: url("../public/2022_2_2048x.png");
+  background-size: cover;
+  background-position: center;
+}

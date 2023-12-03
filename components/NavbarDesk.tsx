@@ -1,5 +1,5 @@
 "use client";
-import navBarItems from "@/constatns/const";
+import { navBarItems } from "@/constatns/const";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 export default function NavbarDesk() {
@@ -21,11 +21,11 @@ export default function NavbarDesk() {
   }, []);
   return (
     <nav
-      className={` text-xl    h-[40px] items-center text-white transition-all    w-full max-lg:hidden fixed top-0  ${
+      className={` text-xl    h-[40px] items-center text-white transition-all    w-full max-lg:hidden fixed top-0 z-10  ${
         scrollPos > 5 ? "px-[0%]  " : "px-[15%]"
       }  `}
     >
-      <div className="flex justify-between bg-[#1d1e20] p-5 rounded-md  ">
+      <div className="flex justify-between bg-[#1d1e2094] p-5 rounded-md  ">
         <div className={`flex gap-5  w-full ${scrollPos > 5 && " px-32"} `}>
           {navBarItems.map((item) => {
             if (item.id <= 4) {

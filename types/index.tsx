@@ -4,4 +4,11 @@ interface navBarIN {
   id: number;
 }
 
-export default navBarIN;
+interface heroItemIMGS {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  id: number;
+}
+export type { navBarIN, heroItemIMGS };
